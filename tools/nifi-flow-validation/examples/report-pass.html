@@ -1,0 +1,131 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NiFi.ai | Flow Validation</title><style>body{margin:0;background:#090f12;color:#eaf4f1;font:16px/1.6 system-ui}main{max-width:1100px;margin:auto;padding:40px 24px}small{color:#8fa5a0;letter-spacing:.16em}h1{font-size:44px;margin:14px 0}b{color:#65efc1}.pass{color:#65efc1}.fail{color:#ffbe70}table{width:100%;border-collapse:collapse;margin:24px 0}td,th{text-align:left;padding:14px;border-bottom:1px solid #263836}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#101c1c;padding:20px}p{max-width:800px;color:#acc0b9}section{overflow-x:auto}</style><main>
+<small>NIFI.AI / OFFLINE ENGINEERING TOOL / v0.1.0</small><h1>Same records. Same outcome?</h1>
+<p>Compare exported records before promoting a pipeline change. This report is generated locally with no network calls.</p>
+<h2>Result: <b class='pass'>PASS</b></h2><section><table><tr><th>Check</th><th>Result</th><th>Evidence</th></tr><tr><td>Non-empty inputs</td><td class='pass'>PASS</td><td>Both exports must contain records.</td></tr><tr><td>Record count</td><td class='pass'>PASS</td><td>baseline=10, candidate=10, drift_pct=0.0, limit=0</td></tr><tr><td>Required record IDs</td><td class='pass'>PASS</td><td>Missing/invalid IDs: 0, 0</td></tr><tr><td>Unique record IDs</td><td class='pass'>PASS</td><td>Duplicate rows: 0, 0</td></tr><tr><td>Observed top-level schema</td><td class='pass'>PASS</td><td>Compare field names, observed JSON types, and missing-field patterns; CSV values remain strings.</td></tr><tr><td>Record ID coverage</td><td class='pass'>PASS</td><td>missing=0, unexpected=0</td></tr><tr><td>Matched record content</td><td class='pass'>PASS</td><td>changed_records=0; arrival timestamp excluded from value comparison</td></tr><tr><td>Valid timestamps</td><td class='pass'>PASS</td><td>Invalid timestamps: 0, 0</td></tr><tr><td>Non-negative arrival delay</td><td class='pass'>PASS</td><td>Negative delays indicate clock or timestamp problems.</td></tr><tr><td>Candidate p95 arrival delay</td><td class='pass'>PASS</td><td>p95_seconds=4.0, limit_seconds=10.0</td></tr></table></section><p>Exported record comparison; not a NiFi flow certification or production approval.</p><details><summary>Full evidence report</summary><pre>{
+  &quot;tool&quot;: &quot;NiFi.ai Flow Validation&quot;,
+  &quot;version&quot;: &quot;0.1.0&quot;,
+  &quot;status&quot;: &quot;PASS&quot;,
+  &quot;scope&quot;: &quot;Exported record comparison; not a NiFi flow certification or production approval.&quot;,
+  &quot;policy&quot;: {
+    &quot;key&quot;: &quot;id&quot;,
+    &quot;event_field&quot;: &quot;event_time&quot;,
+    &quot;ingest_field&quot;: &quot;ingested_at&quot;,
+    &quot;ignored_fields&quot;: [],
+    &quot;max_count_drift_pct&quot;: 0,
+    &quot;max_p95_latency_seconds&quot;: 10.0
+  },
+  &quot;baseline&quot;: {
+    &quot;records&quot;: 10,
+    &quot;missing_or_invalid_ids&quot;: 0,
+    &quot;duplicate_id_rows&quot;: 0,
+    &quot;schema&quot;: {
+      &quot;event_time&quot;: [
+        &quot;string&quot;
+      ],
+      &quot;id&quot;: [
+        &quot;string&quot;
+      ],
+      &quot;ingested_at&quot;: [
+        &quot;string&quot;
+      ],
+      &quot;state&quot;: [
+        &quot;string&quot;
+      ],
+      &quot;temperature_c&quot;: [
+        &quot;integer&quot;
+      ]
+    },
+    &quot;invalid_timestamps&quot;: 0,
+    &quot;negative_latency_rows&quot;: 0,
+    &quot;event_min_utc&quot;: &quot;2026-09-23T12:00:00+00:00&quot;,
+    &quot;event_max_utc&quot;: &quot;2026-09-23T12:09:00+00:00&quot;,
+    &quot;latency_p95_seconds&quot;: 2.0,
+    &quot;latency_max_seconds&quot;: 2.0
+  },
+  &quot;candidate&quot;: {
+    &quot;records&quot;: 10,
+    &quot;missing_or_invalid_ids&quot;: 0,
+    &quot;duplicate_id_rows&quot;: 0,
+    &quot;schema&quot;: {
+      &quot;event_time&quot;: [
+        &quot;string&quot;
+      ],
+      &quot;id&quot;: [
+        &quot;string&quot;
+      ],
+      &quot;ingested_at&quot;: [
+        &quot;string&quot;
+      ],
+      &quot;state&quot;: [
+        &quot;string&quot;
+      ],
+      &quot;temperature_c&quot;: [
+        &quot;integer&quot;
+      ]
+    },
+    &quot;invalid_timestamps&quot;: 0,
+    &quot;negative_latency_rows&quot;: 0,
+    &quot;event_min_utc&quot;: &quot;2026-09-23T12:00:00+00:00&quot;,
+    &quot;event_max_utc&quot;: &quot;2026-09-23T12:09:00+00:00&quot;,
+    &quot;latency_p95_seconds&quot;: 4.0,
+    &quot;latency_max_seconds&quot;: 4.0
+  },
+  &quot;checks&quot;: [
+    {
+      &quot;check&quot;: &quot;Non-empty inputs&quot;,
+      &quot;status&quot;: &quot;PASS&quot;,
+      &quot;detail&quot;: &quot;Both exports must contain records.&quot;
+    },
+    {
+      &quot;check&quot;: &quot;Record count&quot;,
+      &quot;status&quot;: &quot;PASS&quot;,
+      &quot;detail&quot;: &quot;baseline=10, candidate=10, drift_pct=0.0, limit=0&quot;
+    },
+    {
+      &quot;check&quot;: &quot;Required record IDs&quot;,
+      &quot;status&quot;: &quot;PASS&quot;,
+      &quot;detail&quot;: &quot;Missing/invalid IDs: 0, 0&quot;
+    },
+    {
+      &quot;check&quot;: &quot;Unique record IDs&quot;,
+      &quot;status&quot;: &quot;PASS&quot;,
+      &quot;detail&quot;: &quot;Duplicate rows: 0, 0&quot;
+    },
+    {
+      &quot;check&quot;: &quot;Observed top-level schema&quot;,
+      &quot;status&quot;: &quot;PASS&quot;,
+      &quot;detail&quot;: &quot;Compare field names, observed JSON types, and missing-field patterns; CSV values remain strings.&quot;
+    },
+    {
+      &quot;check&quot;: &quot;Record ID coverage&quot;,
+      &quot;status&quot;: &quot;PASS&quot;,
+      &quot;detail&quot;: &quot;missing=0, unexpected=0&quot;
+    },
+    {
+      &quot;check&quot;: &quot;Matched record content&quot;,
+      &quot;status&quot;: &quot;PASS&quot;,
+      &quot;detail&quot;: &quot;changed_records=0; arrival timestamp excluded from value comparison&quot;
+    },
+    {
+      &quot;check&quot;: &quot;Valid timestamps&quot;,
+      &quot;status&quot;: &quot;PASS&quot;,
+      &quot;detail&quot;: &quot;Invalid timestamps: 0, 0&quot;
+    },
+    {
+      &quot;check&quot;: &quot;Non-negative arrival delay&quot;,
+      &quot;status&quot;: &quot;PASS&quot;,
+      &quot;detail&quot;: &quot;Negative delays indicate clock or timestamp problems.&quot;
+    },
+    {
+      &quot;check&quot;: &quot;Candidate p95 arrival delay&quot;,
+      &quot;status&quot;: &quot;PASS&quot;,
+      &quot;detail&quot;: &quot;p95_seconds=4.0, limit_seconds=10.0&quot;
+    }
+  ],
+  &quot;source_sha256&quot;: {
+    &quot;baseline&quot;: &quot;970e04c05cc4b350a4e49c44428641a0ac7da79b97169819f01353fb79026e89&quot;,
+    &quot;candidate&quot;: &quot;c78a530cd792528a15b445809dcdac90e5a5e557db851b52ad36c4a45e5c211d&quot;
+  },
+  &quot;generated_at_utc&quot;: &quot;2026-09-23T18:14:42.594502+00:00&quot;
+}</pre></details><p>Independent tooling by Lloyd Clark / Federal.AI. Not affiliated with or endorsed by the Apache Software Foundation.</p></main></html>

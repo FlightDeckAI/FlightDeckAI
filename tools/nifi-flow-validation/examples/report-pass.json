@@ -1,0 +1,127 @@
+{
+  "tool": "NiFi.ai Flow Validation",
+  "version": "0.1.0",
+  "status": "PASS",
+  "scope": "Exported record comparison; not a NiFi flow certification or production approval.",
+  "policy": {
+    "key": "id",
+    "event_field": "event_time",
+    "ingest_field": "ingested_at",
+    "ignored_fields": [],
+    "max_count_drift_pct": 0,
+    "max_p95_latency_seconds": 10.0
+  },
+  "baseline": {
+    "records": 10,
+    "missing_or_invalid_ids": 0,
+    "duplicate_id_rows": 0,
+    "schema": {
+      "event_time": [
+        "string"
+      ],
+      "id": [
+        "string"
+      ],
+      "ingested_at": [
+        "string"
+      ],
+      "state": [
+        "string"
+      ],
+      "temperature_c": [
+        "integer"
+      ]
+    },
+    "invalid_timestamps": 0,
+    "negative_latency_rows": 0,
+    "event_min_utc": "2026-09-23T12:00:00+00:00",
+    "event_max_utc": "2026-09-23T12:09:00+00:00",
+    "latency_p95_seconds": 2.0,
+    "latency_max_seconds": 2.0
+  },
+  "candidate": {
+    "records": 10,
+    "missing_or_invalid_ids": 0,
+    "duplicate_id_rows": 0,
+    "schema": {
+      "event_time": [
+        "string"
+      ],
+      "id": [
+        "string"
+      ],
+      "ingested_at": [
+        "string"
+      ],
+      "state": [
+        "string"
+      ],
+      "temperature_c": [
+        "integer"
+      ]
+    },
+    "invalid_timestamps": 0,
+    "negative_latency_rows": 0,
+    "event_min_utc": "2026-09-23T12:00:00+00:00",
+    "event_max_utc": "2026-09-23T12:09:00+00:00",
+    "latency_p95_seconds": 4.0,
+    "latency_max_seconds": 4.0
+  },
+  "checks": [
+    {
+      "check": "Non-empty inputs",
+      "status": "PASS",
+      "detail": "Both exports must contain records."
+    },
+    {
+      "check": "Record count",
+      "status": "PASS",
+      "detail": "baseline=10, candidate=10, drift_pct=0.0, limit=0"
+    },
+    {
+      "check": "Required record IDs",
+      "status": "PASS",
+      "detail": "Missing/invalid IDs: 0, 0"
+    },
+    {
+      "check": "Unique record IDs",
+      "status": "PASS",
+      "detail": "Duplicate rows: 0, 0"
+    },
+    {
+      "check": "Observed top-level schema",
+      "status": "PASS",
+      "detail": "Compare field names, observed JSON types, and missing-field patterns; CSV values remain strings."
+    },
+    {
+      "check": "Record ID coverage",
+      "status": "PASS",
+      "detail": "missing=0, unexpected=0"
+    },
+    {
+      "check": "Matched record content",
+      "status": "PASS",
+      "detail": "changed_records=0; arrival timestamp excluded from value comparison"
+    },
+    {
+      "check": "Valid timestamps",
+      "status": "PASS",
+      "detail": "Invalid timestamps: 0, 0"
+    },
+    {
+      "check": "Non-negative arrival delay",
+      "status": "PASS",
+      "detail": "Negative delays indicate clock or timestamp problems."
+    },
+    {
+      "check": "Candidate p95 arrival delay",
+      "status": "PASS",
+      "detail": "p95_seconds=4.0, limit_seconds=10.0"
+    }
+  ],
+  "source_sha256": {
+    "baseline": "970e04c05cc4b350a4e49c44428641a0ac7da79b97169819f01353fb79026e89",
+    "candidate": "c78a530cd792528a15b445809dcdac90e5a5e557db851b52ad36c4a45e5c211d"
+  },
+  "generated_at_utc": "2026-09-23T18:14:42.594502+00:00"
+}
