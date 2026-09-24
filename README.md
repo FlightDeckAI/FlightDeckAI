@@ -52,6 +52,19 @@ An extension of [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything): age
 
 [Run the extension](https://github.com/FlightDeckAI/CLI-Anything-NiFi/tree/main/nifi/agent-harness) · [See what changed](https://github.com/FlightDeckAI/CLI-Anything-NiFi/blob/main/nifi/UPSTREAM.md)
 
+## Applied open-source builds
+
+Four focused prototypes built on community projects, with upstream credit, runnable examples and **37 passing local tests** across the additions.
+
+| Project | My contribution | Upstream |
+| --- | --- | --- |
+| [**NiFi Flow Doctor**](https://github.com/FlightDeckAI/nifi-flow-doctor) | Evidence-linked flow inspection, HTML/JSON reports and an optional local Strands/Ollama explanation adapter. Model inference is not yet validated. | [Strands Harness SDK](https://github.com/strands-agents/harness-sdk) |
+| [**Chalker**](https://github.com/FlightDeckAI/chalker) | Aircraft scheduling proposals with maintenance conflicts, owner review, turnaround buffers and DST checks through a shared agent action. Headless; no bookings. | [Builder.io Agent-Native](https://github.com/BuilderIO/agent-native) |
+| [**Motor Quote Workbench**](https://github.com/FlightDeckAI/motor-quote-workbench) | Editable motor quote spreadsheet, specification screening and gross-margin pricing for industrial service workflows. Local browser app; no AI inference. | [Univer](https://github.com/dream-num/univer) |
+| [**Federal.AI Preflight**](https://github.com/FlightDeckAI/federal-ai-preflight) | Static AX manifest checks for artifact pinning, egress, references and offline assumptions. No deployment or accreditation claim. | [Google AX](https://github.com/google/ax) |
+
+Each repository separates the added domain logic from the original framework. Synthetic examples only; validation limits and quickstarts are documented.
+
 ## Executive perspective
 
 ### [Where AI creates operational value—and what must remain under human control](notes/05-ai-value-and-human-control.md)
