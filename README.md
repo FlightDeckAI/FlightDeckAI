@@ -1,16 +1,18 @@
-<img src="assets/f35-tactical-ai.png" alt="Concept artwork: an F-35 in a tactical AI hangar with secure compute racks and cyan-green data networks." width="100%" />
+<p align="center">
+  <img src="assets/f35-executive-banner.png" alt="Panoramic concept artwork: a graphite F-35 in an AI hangar with restrained cyan and green lighting." width="720" />
+</p>
 
 # Lloyd Clark, PhD
 
 ### Making AI operational in defense, aviation, and industry.
 
-I lead Federal.AI, turning complex operational problems into deployable AI capabilities for defense, aviation, and industry.
+I lead [Federal.AI](https://federal.ai/?utm_source=github&utm_medium=profile&utm_campaign=founder), building AI systems around consequential decisions, reliable data, and human control.
 
 **Founder & CEO, Federal.AI · 20+ years in software and AI/ML · CISSP / ISSEP · Commercial pilot & CFI**
 
 **[See the work ↓](#selected-work)** · **[Discuss a strategic engagement ↗](mailto:lc@federal.ai?subject=Federal.AI%20%E2%80%94%20strategic%20engagement&body=Organization%20and%20role%3A%20%0AProblem%20/%20desired%20outcome%3A%20%0ACurrent%20systems%20and%20deployment%20environment%3A%20%0ATimeline%3A%20%0ABudget%20range%20%28if%20established%29%3A%20%0A)**
 
-My work spans local models, data pipelines, simulation, and the controls that make an AI workflow usable inside an operating environment. I lead [Federal.AI](https://federal.ai/?utm_source=github&utm_medium=profile&utm_campaign=founder), and I own [Blue Ridge Electric](https://blueridge.ai/), where industrial problems keep the engineering grounded.
+My perspective combines AI engineering, commercial aviation, and ownership of [Blue Ridge Electric Service](https://blueridge.ai/). Local models, agents, data infrastructure, and simulation are the tools; better operational decisions are the objective.
 
 **In the press:** [AOPA covered No Brashers, the pilot tool my daughter Lilli and I built →](https://www.aopa.org/news-and-media/all-news/2026/january/28/flight-lessons-inspire-a-new-pilot-tool)
 
@@ -50,6 +52,14 @@ An extension of [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything): age
 
 [Run the extension](https://github.com/FlightDeckAI/CLI-Anything-NiFi/tree/main/nifi/agent-harness) · [See what changed](https://github.com/FlightDeckAI/CLI-Anything-NiFi/blob/main/nifi/UPSTREAM.md)
 
+## Executive perspective
+
+### [Where AI creates operational value—and what must remain under human control](notes/05-ai-value-and-human-control.md)
+
+Start with a decision worth improving. Measure the value after integration, review, and operating costs. Give the system authority in proportion to the evidence that it can act reliably.
+
+**The brief:** choosing the workflow, measuring the return, and setting the boundary between assistance and action.
+
 ## Engineering field notes
 
 My working perspective: **define the decision, make the evidence inspectable, and test what happens when the system is wrong.**
@@ -61,14 +71,21 @@ My working perspective: **define the decision, make the evidence inspectable, an
 | [Before upgrading the model, test the data path](notes/03-data-before-models.md) | Run a reproducible comparison that catches failures counts miss |
 | [What aviation checklists teach us about AI deployment](notes/04-checklists-and-ai.md) | Put the verification next to the consequential action |
 
-## The wider workshop
+## Products & operating businesses
 
-| Project | Its place in the work |
+| Product or business | Focus |
 | --- | --- |
 | [**CyberPlane**](https://cyberplane.com/) | Aircraft maintenance records and evidence workflows. An aviation AI product in development. |
 | [**LloydPilot.com**](https://lloydpilot.com/) | My aviation home: aircraft stories, interactive learning, and the curiosity behind the engineering. |
-| [**Blue Ridge Electric**](https://blueridge.ai/) | Industrial ownership and practical problems in equipment, service work, and operating costs. |
-| [**SPLap · Splunk + F1**](https://splap.dev/) | A father-daughter Splunk app with Lilli: replay real Formula 1 telemetry and inspect the SPL behind each panel. |
+| [**Blue Ridge Electric Service**](https://blueridge.ai/) | Electric motors, industrial service, and firsthand experience with equipment reliability and operating costs. |
+
+### SPLap · Published Splunk app
+
+A published app for **Splunk Enterprise and Splunk Cloud**. Built with my daughter Lilli, SPLap turns real telemetry into interactive analysis and hands-on SPL learning.
+
+[Explore the app](https://splap.dev/) · [Get it on Splunkbase](https://splunkbase.splunk.com/app/9608)
+
+Find it useful? [Leave us an honest star rating on Splunkbase](https://splunkbase.splunk.com/app/9608).
 
 ### Open aviation resources
 
