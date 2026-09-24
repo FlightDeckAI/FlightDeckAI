@@ -10,7 +10,7 @@ I lead Federal.AI, turning complex operational problems into deployable AI capab
 
 **[See the work ↓](#selected-work)** · **[Discuss a strategic engagement ↗](mailto:lc@federal.ai?subject=Federal.AI%20%E2%80%94%20strategic%20engagement&body=Organization%20and%20role%3A%20%0AProblem%20/%20desired%20outcome%3A%20%0ACurrent%20systems%20and%20deployment%20environment%3A%20%0ATimeline%3A%20%0ABudget%20range%20%28if%20established%29%3A%20%0A)**
 
-My work spans local models, data pipelines, simulation, and the controls that make an AI workflow usable inside an operating environment. I lead [Federal.AI](https://federal.ai/?utm_source=github&utm_medium=profile&utm_campaign=founder), and I own Blue Ridge Electric, where industrial problems keep the engineering grounded.
+My work spans local models, data pipelines, simulation, and the controls that make an AI workflow usable inside an operating environment. I lead [Federal.AI](https://federal.ai/?utm_source=github&utm_medium=profile&utm_campaign=founder), and I own [Blue Ridge Electric](https://blueridge.ai/), where industrial problems keep the engineering grounded.
 
 **In the press:** [AOPA covered No Brashers, the pilot tool my daughter Lilli and I built →](https://www.aopa.org/news-and-media/all-news/2026/january/28/flight-lessons-inspire-a-new-pilot-tool)
 
@@ -67,7 +67,7 @@ My working perspective: **define the decision, make the evidence inspectable, an
 | --- | --- |
 | [**CyberPlane**](https://cyberplane.com/) | Aircraft maintenance records and evidence workflows. An aviation AI product in development. |
 | [**LloydPilot.com**](https://lloydpilot.com/) | My aviation home: aircraft stories, interactive learning, and the curiosity behind the engineering. |
-| **Blue Ridge Electric** | Industrial ownership and practical problems in equipment, service work, and operating costs. |
+| [**Blue Ridge Electric**](https://blueridge.ai/) | Industrial ownership and practical problems in equipment, service work, and operating costs. |
 | [**SPLap · Splunk + F1**](https://splap.dev/) | A father-daughter Splunk app with Lilli: replay real Formula 1 telemetry and inspect the SPL behind each panel. |
 
 ### Open aviation resources
