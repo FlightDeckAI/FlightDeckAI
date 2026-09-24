@@ -18,4 +18,4 @@ Can a reader find evidence behind a recommendation? Are missing inputs visible? 
 
 Bring one recurring decision and its source systems. The first task is to define the evidence contract, operating boundary, acceptance cases, and accountable owner.
 
-[Book a technical briefing](https://calendly.com/lloydclark/federal-ai-mission-briefing-30-min?utm_source=github&utm_medium=case_study&utm_campaign=mission_cockpit) · [Back](../README.md)
+[Submit an engagement inquiry](mailto:lc@federal.ai?subject=Federal.AI%20%E2%80%94%20strategic%20engagement&body=Organization%20and%20role%3A%20%0AProblem%20/%20desired%20outcome%3A%20%0ACurrent%20systems%20and%20deployment%20environment%3A%20%0ATimeline%3A%20%0ABudget%20range%20%28if%20established%29%3A%20%0A) · [Back](../README.md)

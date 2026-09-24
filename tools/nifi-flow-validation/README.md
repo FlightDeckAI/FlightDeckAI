@@ -72,4 +72,4 @@ Tests cover reordered records, duplicate/missing IDs, empty inputs, value and sc
 
 ## Need this integrated?
 
-Bring one flow, one comparison window, and your acceptance criteria. [Book a Federal.AI technical briefing](https://calendly.com/lloydclark/federal-ai-mission-briefing-30-min?utm_source=github&utm_medium=profile&utm_campaign=flow_validation) or [email Lloyd](mailto:lc@federal.ai?subject=NiFi%20flow%20validation).
+Bring one flow, one comparison window, and your acceptance criteria. [Submit an engagement inquiry](mailto:lc@federal.ai?subject=Federal.AI%20%E2%80%94%20strategic%20engagement&body=Organization%20and%20role%3A%20%0AProblem%20/%20desired%20outcome%3A%20%0ACurrent%20systems%20and%20deployment%20environment%3A%20%0ATimeline%3A%20%0ABudget%20range%20%28if%20established%29%3A%20%0A) or [email Lloyd](mailto:lc@federal.ai?subject=NiFi%20flow%20validation).
