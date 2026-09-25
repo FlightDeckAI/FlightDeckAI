@@ -1,4 +1,4 @@
-# NiFi.ai Flow Validation
+# Flow Validation · supporting GoldenAye Flow Lab
 
 **Same records. Same outcome? Check before promoting a pipeline change.**
 
@@ -6,7 +6,7 @@ A small offline command-line tool that compares exported records from a baseline
 
 **v0.1.0 · Python 3.11+ · standard library only · no network calls · MIT license**
 
-Independent tooling by Lloyd Clark / Federal.AI. Not affiliated with or endorsed by the Apache Software Foundation. NiFi.ai is Lloyd's independent project brand; this is not an Apache NiFi distribution or processor.
+Independent tooling by Lloyd Clark / Federal.ai, supporting [GoldenAye Flow Lab](https://goldenaye.ai/). This comparator evaluates exported records only. Not affiliated with or endorsed by the Apache Software Foundation; this is not an Apache NiFi distribution or processor.
 
 ## Try the synthetic example
 

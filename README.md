@@ -24,7 +24,7 @@ I publish the inputs, methods, raw outputs, and failure cases so another enginee
 
 | Experiment | What it tests | Evidence |
 | --- | --- | --- |
-| **NiFi diagnosis** | Can a local model distinguish a configuration concern from an unsupported claim about runtime behavior? | Public synthetic cases, a deterministic baseline, strict output grading, and recorded model outputs |
+| **NiFi diagnosis for GoldenAye** | Can a local model distinguish a configuration concern from an unsupported claim about runtime behavior? | Public synthetic cases, a deterministic baseline, strict output grading, and recorded model outputs |
 | **Ingest economics** | At the same byte budget, which sampling policy preserves useful diagnostic context? | 20 seeded trials, equal-volume comparisons, explicit cost assumptions, and reproducible charts |
 
 **[Explore the experiments →](https://github.com/FlightDeckAI/applied-ai-flight-tests)** · [Methods and limitations](https://github.com/FlightDeckAI/applied-ai-flight-tests/blob/main/METHODS.md)
@@ -58,11 +58,11 @@ A public aircraft-readiness demonstration that brings scattered evidence, a prop
 
 [Explore the demo](https://federal.ai/cockpit?utm_source=github&utm_medium=profile&utm_campaign=mission_cockpit) · [Engineering brief](case-studies/mission-cockpit.md)
 
-### NiFi.ai Flow Validation
+### GoldenAye Flow Lab · by Federal.ai
 
-An offline Python comparator for CSV and JSON exports. It checks record identity, content, schema, and arrival delay because matching record counts can conceal missing or changed events. **16 automated tests · HTML/JSON reports · no model dependency.**
+A private AI workspace for Apache NiFi flows: chat with flow evidence, inspect configuration, and compare ingest policies with deterministic replay. Built around local models and operator review; the pilot is under evaluation for disconnected deployment.
 
-[Run the tool](tools/nifi-flow-validation/README.md) · [Read the experiment](case-studies/flow-validation.md) · [NiFi Flow Checkride extension](https://github.com/FlightDeckAI/CLI-Anything-NiFi/tree/main/nifi/agent-harness)
+[Explore GoldenAye](https://goldenaye.ai/) · [Flow-validation example](case-studies/flow-validation.md) · [Run the validation tool](tools/nifi-flow-validation/README.md)
 
 ### No Brashers
 
@@ -76,7 +76,7 @@ Four focused prototypes built on community projects, with upstream credit, runna
 
 | Project | My contribution | Upstream |
 | --- | --- | --- |
-| [**NiFi Flow Doctor**](https://github.com/FlightDeckAI/nifi-flow-doctor) | Evidence-linked flow inspection, HTML/JSON reports and an optional local Strands/Ollama explanation adapter. Model inference is not yet validated. | [Strands Harness SDK](https://github.com/strands-agents/harness-sdk) |
+| [**Flow Doctor research**](https://github.com/FlightDeckAI/nifi-flow-doctor) | Early flow-inspection work supporting GoldenAye Flow Lab: evidence-linked inspection, HTML/JSON reports and an optional local Strands/Ollama explanation adapter. Model inference in this prototype is not yet validated. | [Strands Harness SDK](https://github.com/strands-agents/harness-sdk) |
 | [**Chalker**](https://github.com/FlightDeckAI/chalker) | Aircraft scheduling proposals with maintenance conflicts, owner review, turnaround buffers and DST checks through a shared agent action. Headless; no bookings. | [Builder.io Agent-Native](https://github.com/BuilderIO/agent-native) |
 | [**Motor Quote Workbench**](https://github.com/FlightDeckAI/motor-quote-workbench) | Editable motor quote spreadsheet, specification screening and gross-margin pricing for industrial service workflows. Local browser app; no AI inference. | [Univer](https://github.com/dream-num/univer) |
 | [**Federal.AI Preflight**](https://github.com/FlightDeckAI/federal-ai-preflight) | Static AX manifest checks for artifact pinning, egress, references and offline assumptions. No deployment or accreditation claim. | [Google AX](https://github.com/google/ax) |
@@ -113,4 +113,4 @@ I work with enterprise leaders, program owners, and prime partners on AI deploym
 
 **[Submit an engagement inquiry](mailto:lc@federal.ai?subject=Federal.AI%20%E2%80%94%20strategic%20engagement&body=Organization%20and%20role%3A%20%0AProblem%20/%20desired%20outcome%3A%20%0ACurrent%20systems%20and%20deployment%20environment%3A%20%0ATimeline%3A%20%0ABudget%20range%20%28if%20established%29%3A%20%0A)** · **[Federal.AI](https://federal.ai/?utm_source=github&utm_medium=profile&utm_campaign=engagement)** · [Speaking and technical briefings](speaking/README.md)
 
-<sub>Hero: AI-generated concept artwork. Product screenshots and synthetic demonstrations are identified separately. NiFi.ai is an independent project and is not affiliated with or endorsed by the Apache Software Foundation. Aviation resources are educational; verify outputs against current authoritative references.</sub>
+<sub>Hero: AI-generated concept artwork. Product screenshots and synthetic demonstrations are identified separately. GoldenAye Flow Lab by Federal.ai is an independent project and is not affiliated with or endorsed by the Apache Software Foundation. Aviation resources are educational; verify outputs against current authoritative references.</sub>

@@ -22,7 +22,7 @@ Do not turn the gates into an average score. A strong answer on six items does n
 
 The release artifact should fit on one page: scope, evidence references, test results, unresolved limitations, approver, and recovery owner. Link to detailed logs rather than hiding the decision in them.
 
-The [NiFi.ai comparator](../tools/nifi-flow-validation/README.md) implements one small piece of gate 2: comparing two exported datasets. Passing that comparison does not satisfy the other gates.
+The [export comparator supporting GoldenAye Flow Lab](../tools/nifi-flow-validation/README.md) implements one small piece of gate 2: comparing two exported datasets. Passing that comparison does not satisfy the other gates.
 
 **Use this worksheet:** copy the seven rows into your release review, replace generic failure conditions with workflow-specific ones, and attach evidence before asking for approval.
 

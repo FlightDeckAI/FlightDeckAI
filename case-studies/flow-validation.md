@@ -1,6 +1,8 @@
 # Flow Validation: equal counts can hide different records
 
-**Reproducible synthetic experiment · v0.1.0 · NiFi.ai**
+**Reproducible synthetic experiment · v0.1.0 · GoldenAye Flow Lab research**
+
+This supporting experiment evaluates the exported-record comparator only.
 
 ## The problem
 
