@@ -2,7 +2,6 @@
   <img src="assets/f35-executive-banner.png" alt="Panoramic concept artwork: a graphite F-35 in an AI hangar with restrained cyan and green lighting." width="720" />
 </p>
 
-# Lloyd Clark, PhD
 
 ### Making AI operational in defense, aviation, and industry.
 
