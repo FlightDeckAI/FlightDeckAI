@@ -10,47 +10,65 @@ I lead [Federal.AI](https://federal.ai/?utm_source=github&utm_medium=profile&utm
 
 **Founder & CEO, Federal.AI · 20+ years in software and AI/ML · CISSP / ISSEP · Commercial pilot & CFI**
 
-**[See the work ↓](#selected-work)** · **[Discuss a strategic engagement ↗](mailto:lc@federal.ai?subject=Federal.AI%20%E2%80%94%20strategic%20engagement&body=Organization%20and%20role%3A%20%0AProblem%20/%20desired%20outcome%3A%20%0ACurrent%20systems%20and%20deployment%20environment%3A%20%0ATimeline%3A%20%0ABudget%20range%20%28if%20established%29%3A%20%0A)**
+**[Experiments](https://github.com/FlightDeckAI/applied-ai-flight-tests)** · **[Field notes](notes/README.md)** · **[Discuss a strategic engagement ↗](mailto:lc@federal.ai?subject=Federal.AI%20%E2%80%94%20strategic%20engagement&body=Organization%20and%20role%3A%20%0AProblem%20/%20desired%20outcome%3A%20%0ACurrent%20systems%20and%20deployment%20environment%3A%20%0ATimeline%3A%20%0ABudget%20range%20%28if%20established%29%3A%20%0A)**
 
 My perspective combines AI engineering, commercial aviation, and ownership of [Blue Ridge Electric Service](https://blueridge.ai/). Local models, agents, data infrastructure, and simulation are the tools; better operational decisions are the objective.
 
 **In the press:** [AOPA covered No Brashers, the pilot tool my daughter Lilli and I built →](https://www.aopa.org/news-and-media/all-news/2026/january/28/flight-lessons-inspire-a-new-pilot-tool)
 
+## Applied AI Flight Tests
+
+**Original, reproducible experiments in model behavior, operational evidence, and data economics.**
+
+I publish the inputs, methods, raw outputs, and failure cases so another engineer can challenge the result.
+
+| Experiment | What it tests | Evidence |
+| --- | --- | --- |
+| **NiFi diagnosis** | Can a local model distinguish a configuration concern from an unsupported claim about runtime behavior? | Public synthetic cases, a deterministic baseline, strict output grading, and recorded model outputs |
+| **Ingest economics** | At the same byte budget, which sampling policy preserves useful diagnostic context? | 20 seeded trials, equal-volume comparisons, explicit cost assumptions, and reproducible charts |
+
+**[Explore the experiments →](https://github.com/FlightDeckAI/applied-ai-flight-tests)** · [Methods and limitations](https://github.com/FlightDeckAI/applied-ai-flight-tests/blob/main/METHODS.md)
+
+These are development experiments with synthetic data. The reports separate software checks, model performance, and business assumptions.
+
+## Ideas I am testing
+
+**Measure accepted outcomes.** Include review, rework, rejected attempts, and operating cost when comparing AI workflows.
+
+**Make authority explicit.** Bind human approval to the exact proposed action and expected state; test retries, expiry, and conflicting updates.
+
+**Evaluate the whole system.** A local model is one component. Data quality, dependencies, evidence retrieval, and recovery determine whether it can do useful work.
+
+| Latest field note | Practical question |
+| --- | --- |
+| [Measure AI cost per useful outcome](notes/06-cost-per-useful-outcome.md) | When does reviewer effort erase the apparent savings? |
+| [Human approval is an architecture boundary](notes/07-approval-as-architecture.md) | How do we ensure the reviewed action is the one that executes? |
+| [Evaluate the whole disconnected AI system](notes/08-disconnected-ai-evaluation.md) | What evidence supports a claim that a workflow can operate offline? |
+| [Where AI creates operational value](notes/05-ai-value-and-human-control.md) | Which decisions should we improve, and where should authority stop? |
+
+[All eight engineering field notes →](notes/README.md) · [Speaking topics and bio →](speaking/README.md)
+
 ## Selected work
 
-### 01 / Federal.AI Mission Cockpit
+### Federal.AI Mission Cockpit
 
-**The problem:** operational decisions depend on evidence scattered across maintenance, scheduling, and supply systems.
+A public aircraft-readiness demonstration that brings scattered evidence, a proposed decision, and human approval into one interface. **Synthetic scenario.**
 
-**The demonstration:** a public aircraft-readiness scenario that brings the evidence, a proposed decision, and human approval into one interface. **Synthetic data.**
+<a href="https://federal.ai/cockpit?utm_source=github&utm_medium=profile&utm_campaign=mission_cockpit"><img src="https://federal.ai/assets/cockpit-hero.jpg" alt="Federal.AI Mission Cockpit interface showing a synthetic aircraft-readiness scenario and approval queue." width="100%" /></a>
 
-<a href="https://federal.ai/cockpit?utm_source=github&utm_medium=profile&utm_campaign=mission_cockpit"><img src="https://federal.ai/assets/cockpit-hero.jpg" alt="Real Federal.AI Mission Cockpit interface showing a synthetic aircraft-readiness scenario and approval queue." width="100%" /></a>
+[Explore the demo](https://federal.ai/cockpit?utm_source=github&utm_medium=profile&utm_campaign=mission_cockpit) · [Engineering brief](case-studies/mission-cockpit.md)
 
-[Explore the demo](https://federal.ai/cockpit?utm_source=github&utm_medium=profile&utm_campaign=mission_cockpit) · [Read the engineering brief](case-studies/mission-cockpit.md)
+### NiFi.ai Flow Validation
 
-### 02 / NiFi.ai Flow Validation
+An offline Python comparator for CSV and JSON exports. It checks record identity, content, schema, and arrival delay because matching record counts can conceal missing or changed events. **16 automated tests · HTML/JSON reports · no model dependency.**
 
-**The problem:** two pipelines can output the same number of records while losing, duplicating, or changing different events.
+[Run the tool](tools/nifi-flow-validation/README.md) · [Read the experiment](case-studies/flow-validation.md) · [NiFi Flow Checkride extension](https://github.com/FlightDeckAI/CLI-Anything-NiFi/tree/main/nifi/agent-harness)
 
-**The tool:** an offline Python comparator for CSV and JSON exports, with checks for record identity, content, schema, and arrival delay. Local HTML and JSON evidence reports. No model or cloud dependency.
+### No Brashers
 
-**v0.1.0 · 16 automated tests · synthetic passing and failing examples included**
+A pilot workspace for checklist prompts, phrase references, and debrief notes, developed with my daughter Lilli. [AOPA covered our story in January 2026](https://www.aopa.org/news-and-media/all-news/2026/january/28/flight-lessons-inspire-a-new-pilot-tool).
 
-[Run the tool](tools/nifi-flow-validation/README.md) · [Read the experiment](case-studies/flow-validation.md) · [Discuss a flow integration](mailto:lc@federal.ai?subject=NiFi%20flow%20validation)
-
-### 03 / No Brashers
-
-**The problem:** a busy pilot needs clear references and room to think.
-
-**The product:** a web workspace for checklist prompts, phrase references, and debrief notes, developed with my daughter Lilli. AOPA published our story in January 2026.
-
-[Launch No Brashers](https://nobrashers.com/) · [Read the product brief](case-studies/no-brashers.md) · [Read the AOPA story](https://www.aopa.org/news-and-media/all-news/2026/january/28/flight-lessons-inspire-a-new-pilot-tool)
-
-### Open-source build / NiFi Flow Checkride
-
-An extension of [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything): agent-friendly inspection, heuristic risk checks, and configuration diffs for exported NiFi flows. **Offline prototype · 11 tests · upstream credited.**
-
-[Run the extension](https://github.com/FlightDeckAI/CLI-Anything-NiFi/tree/main/nifi/agent-harness) · [See what changed](https://github.com/FlightDeckAI/CLI-Anything-NiFi/blob/main/nifi/UPSTREAM.md)
+[Launch No Brashers](https://nobrashers.com/) · [Product brief](case-studies/no-brashers.md)
 
 ## Applied open-source builds
 
@@ -64,25 +82,6 @@ Four focused prototypes built on community projects, with upstream credit, runna
 | [**Federal.AI Preflight**](https://github.com/FlightDeckAI/federal-ai-preflight) | Static AX manifest checks for artifact pinning, egress, references and offline assumptions. No deployment or accreditation claim. | [Google AX](https://github.com/google/ax) |
 
 Each repository separates the added domain logic from the original framework. Synthetic examples only; validation limits and quickstarts are documented.
-
-## Executive perspective
-
-### [Where AI creates operational value—and what must remain under human control](notes/05-ai-value-and-human-control.md)
-
-Start with a decision worth improving. Measure the value after integration, review, and operating costs. Give the system authority in proportion to the evidence that it can act reliably.
-
-**The brief:** choosing the workflow, measuring the return, and setting the boundary between assistance and action.
-
-## Engineering field notes
-
-My working perspective: **define the decision, make the evidence inspectable, and test what happens when the system is wrong.**
-
-| Note | Practical takeaway |
-| --- | --- |
-| [How to know an AI agent is ready for production](notes/01-mission-checkride.md) | A seven-part acceptance worksheet with explicit failure conditions |
-| [What changes when AI cannot reach the internet](notes/02-disconnected-ai.md) | Treat artifacts, dependencies, and updates as part of the product |
-| [Before upgrading the model, test the data path](notes/03-data-before-models.md) | Run a reproducible comparison that catches failures counts miss |
-| [What aviation checklists teach us about AI deployment](notes/04-checklists-and-ai.md) | Put the verification next to the consequential action |
 
 ## Products & operating businesses
 
@@ -112,6 +111,6 @@ I work with enterprise leaders, program owners, and prime partners on AI deploym
 
 **Start with a short brief:** your organization and role, the problem and desired outcome, the deployment environment, and your timeline. Include a budget range if established. We assess fit before scheduling a discussion.
 
-**[Submit an engagement inquiry](mailto:lc@federal.ai?subject=Federal.AI%20%E2%80%94%20strategic%20engagement&body=Organization%20and%20role%3A%20%0AProblem%20/%20desired%20outcome%3A%20%0ACurrent%20systems%20and%20deployment%20environment%3A%20%0ATimeline%3A%20%0ABudget%20range%20%28if%20established%29%3A%20%0A)** · **[Federal.AI](https://federal.ai/?utm_source=github&utm_medium=profile&utm_campaign=engagement)** · [Speaking and partnerships](mailto:lc@federal.ai?subject=Speaking%20or%20partnership%20inquiry)
+**[Submit an engagement inquiry](mailto:lc@federal.ai?subject=Federal.AI%20%E2%80%94%20strategic%20engagement&body=Organization%20and%20role%3A%20%0AProblem%20/%20desired%20outcome%3A%20%0ACurrent%20systems%20and%20deployment%20environment%3A%20%0ATimeline%3A%20%0ABudget%20range%20%28if%20established%29%3A%20%0A)** · **[Federal.AI](https://federal.ai/?utm_source=github&utm_medium=profile&utm_campaign=engagement)** · [Speaking and technical briefings](speaking/README.md)
 
 <sub>Hero: AI-generated concept artwork. Product screenshots and synthetic demonstrations are identified separately. NiFi.ai is an independent project and is not affiliated with or endorsed by the Apache Software Foundation. Aviation resources are educational; verify outputs against current authoritative references.</sub>
