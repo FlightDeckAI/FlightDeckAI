@@ -9,7 +9,13 @@ const packed = names
   .join('')
   .replace(/\s+/g, '');
 
-const source = gunzipSync(Buffer.from(packed, 'base64')).toString('utf8');
+let source = gunzipSync(Buffer.from(packed, 'base64')).toString('utf8');
+source = source.replace(
+  'export default async function main(req,res){',
+  'async function main(req,res){'
+);
+source += '\nmodule.exports = main;\n';
+
 const m = { exports: {} };
 new Function('require', 'module', 'exports', source)(require, m, m.exports);
 export default m.exports;
