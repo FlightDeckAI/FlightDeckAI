@@ -3,8 +3,9 @@ import { readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 
 const require = createRequire(import.meta.url);
-const packed = [1, 2, 3, 4]
-  .map((n) => readFileSync(new URL(`./chunk${n}.txt`, import.meta.url), 'utf8'))
+const names = ['chunk1a.txt', 'chunk1b.txt', 'chunk2.txt', 'chunk3.txt', 'chunk4.txt'];
+const packed = names
+  .map((name) => readFileSync(new URL(`./${name}`, import.meta.url), 'utf8'))
   .join('')
   .replace(/\s+/g, '');
 
