@@ -17,8 +17,37 @@ source = source
     'export default async function main(req,res){',
     'async function main(req,res){'
   );
-source += '\nmodule.exports = main;\n';
+source += '\nmodule.exports = { main, ASSETS };\n';
 
 const m = { exports: {} };
 new Function('require', 'module', 'exports', '__put', source)(require, m, m.exports, put);
-export default m.exports;
+
+const originalLeadCatch = [
+  "  } catch (error) {",
+  "    status.className='form-status error'; status.textContent = `${error.message} Please try again.`;",
+  "  } finally { submit.disabled=false; submit.textContent='REQUEST ACCESS'; }"
+].join('\n');
+
+const fallbackLeadCatch = [
+  "  } catch (error) {",
+  "    const subject = encodeURIComponent(`Airspace Alpha ${payload.plan === 'desk' ? 'Alpha Desk' : 'Pro'} access — ${payload.company || payload.name}`);",
+  "    const body = encodeURIComponent(`Name: ${payload.name}\\nEmail: ${payload.email}\\nCompany: ${payload.company || ''}\\nUse case: ${payload.useCase || ''}\\nPlan: ${payload.plan}\\n\\nSent from AirspaceAlpha.com`);",
+  "    const mail = `mailto:lc@federal.ai?subject=${subject}&body=${body}`;",
+  "    status.className='form-status error';",
+  "    status.innerHTML = `Secure lead storage is temporarily unavailable. <a href=\"${mail}\">Email LloydPilot directly</a>.`;",
+  "  } finally { submit.disabled=false; submit.textContent='REQUEST ACCESS'; }"
+].join('\n');
+
+const appJsRaw = gunzipSync(Buffer.from(m.exports.ASSETS['/app.js'], 'base64')).toString('utf8');
+const appJs = appJsRaw.replace(originalLeadCatch, fallbackLeadCatch);
+
+export default async function handler(req, res) {
+  const raw = String(req.query?.path ?? '').replace(/^\/+|\/+$/g, '');
+  const path = raw ? '/' + raw : '/';
+  if (path === '/app.js') {
+    res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
+    res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+    return res.status(200).send(appJs);
+  }
+  return m.exports.main(req, res);
+}
