@@ -4,7 +4,7 @@ import { createRequire } from 'node:module';
 import { put } from '@vercel/blob';
 
 const require = createRequire(import.meta.url);
-const names = ['chunk1a.txt', 'chunk1b.txt', 'chunk2.txt', 'chunk3.txt', 'chunk4.txt'];
+const names = ['chunk1a.txt', 'chunk1b1.txt', 'chunk1b2.txt', 'chunk2.txt', 'chunk3a.txt', 'chunk3b.txt', 'chunk4.txt'];
 const packed = names
   .map((name) => readFileSync(new URL(`./${name}`, import.meta.url), 'utf8'))
   .join('')
