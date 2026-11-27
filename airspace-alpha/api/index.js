@@ -1,4 +1,4 @@
-import { gunzipSync } from 'node:zlib';
+import { gzipSync, gunzipSync } from 'node:zlib';
 import { readFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { put } from '@vercel/blob';
@@ -40,6 +40,14 @@ const fallbackLeadCatch = [
 
 const appJsRaw = gunzipSync(Buffer.from(m.exports.ASSETS['/app.js'], 'base64')).toString('utf8');
 const appJs = appJsRaw.replace(originalLeadCatch, fallbackLeadCatch);
+
+const homeHtml = gunzipSync(Buffer.from(m.exports.ASSETS['/'], 'base64')).toString('utf8');
+const atlasNav = '<a class="tab" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none" href="/atlas"><span>05</span>ATLAS</a>';
+const homeWithAtlas = homeHtml.replace(
+  /(<nav class="primary-tabs"[^>]*>[\s\S]*?)(<\/nav>)/,
+  (_, tabs, close) => tabs + atlasNav + close
+);
+m.exports.ASSETS['/'] = gzipSync(homeWithAtlas).toString('base64');
 
 export default async function handler(req, res) {
   const raw = String(req.query?.path ?? '').replace(/^\/+|\/+$/g, '');

@@ -2,12 +2,17 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "functions": {
+    "api/atlas.js": {
+      "includeFiles": "atlas/*"
+    },
     "api/index.js": {
       "includeFiles": "api/chunk*.txt",
       "maxDuration": 30
     }
   },
   "rewrites": [
+    { "source": "/atlas", "destination": "/api/atlas" },
+    { "source": "/atlas/:asset", "destination": "/api/atlas?asset=:asset" },
     { "source": "/(.*)", "destination": "/api/index?path=$1" }
   ],
   "headers": [
